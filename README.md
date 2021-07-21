@@ -31,5 +31,6 @@ You can find the data files as follows:
 3. <a href='https://video.udacity-data.com/topher/2019/February/5c747d10_washington/washington.csv'>Washington</a> dataset.
 
 ### Credits
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
+Some ideas are ignited from <a href="https://github.com/Alex-YuZ/ForkGoBike-Explanatory-Data-Analysis">ForkBikeShare Explanatory Data Analysis</a>.
+
 
