@@ -80,6 +80,7 @@ df_CleanUserType <- df %>%
 options(repr.plot.width = 8, repr.plot.height = 4)
 
 # Question 1
+# view by month
 ggplot(df, aes(x=month(df$Start.Time))) +
   geom_bar(color='black', fill='deepskyblue', width=.6) +
   scale_x_continuous(breaks=seq(1, 6)) +
@@ -90,8 +91,29 @@ ggplot(df, aes(x=month(df$Start.Time))) +
 # output stat result
 by(df, month(df$Start.Time), count)
 
+# view by weeday
+ggplot(df, aes(x=wday(df$Start.Time))) +
+  geom_bar(color='black', fill='deepskyblue', width=.6) +
+  scale_x_continuous(breaks=seq(1, 7)) +
+  scale_y_continuous(labels=scales::comma) +
+  theme(plot.title = element_text(size = 16, face = "bold", hjust=.4)) +
+  labs(title = "User Counts in the Days of Week", x="Weekday", y="Number of Users")
+
+# view by hour
+ggplot(df, aes(x=hour(df$Start.Time))) +
+  geom_bar(color='black', fill='deepskyblue') +
+  scale_x_continuous(breaks=seq(0,23,1)) +
+  theme(plot.title = element_text(size = 16, face = "bold", hjust=.4)) +
+  labs(title = "User Counts in Hours of a Day", x="Hour in a Day", y="Number of Users")
 
 # Question 2
+# summary statistics on Trip.Duration
+summary(df$Trip.Duration)
+
+# check quantiles in Trip.Duration
+quantile(df$Trip.Duration, probs=seq(0, 1, .05))
+
+
 # histogram plot of trip  duration by Hour unit
 ggplot(df, aes(x=Trip.Duration/60)) +
   geom_histogram(binwidth=1, color='black', fill='deepskyblue') +
