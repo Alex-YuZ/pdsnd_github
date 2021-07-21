@@ -96,6 +96,13 @@ ggplot(df, aes(x=wday(df$Start.Time))) +
   theme(plot.title = element_text(size = 16, face = "bold", hjust=.4)) +
   labs(title = "User Counts in the Days of Week", x="Weekday", y="Number of Users")
 
+# view by hour
+ggplot(df, aes(x=hour(df$Start.Time))) +
+  geom_bar(color='black', fill='deepskyblue') +
+  scale_x_continuous(breaks=seq(0,23,1)) +
+  theme(plot.title = element_text(size = 16, face = "bold", hjust=.4)) +
+  labs(title = "User Counts in Hours of a Day", x="Hour in a Day", y="Number of Users")
+
 # Question 2
 # histogram plot of trip  duration by Hour unit
 ggplot(df, aes(x=Trip.Duration/60)) +
