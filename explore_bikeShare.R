@@ -59,12 +59,14 @@ df %>%
   filter(Gender %in% c("Male", "Female")) %>%
   count(Gender)
 
+# view gender counts
+df_CleanGender %>%
+  count(Gender)
+
 # this data frame will be used for gender-related analysis
 df_CleanGender <- df %>%
   filter(Gender %in% c("Male", "Female"))
 
-df_CleanGender %>%
-  count(Gender)
 
 # check levels of `User.Type`
 unique(df$User.Type)
@@ -85,6 +87,7 @@ ggplot(df, aes(x=month(df$Start.Time))) +
   theme(plot.title = element_text(size = 16, face = "bold", hjust=.4)) +
   labs(title = "User Counts in the First Half of a Year", x="Month", y="Number of Users")
 
+# output stat result
 by(df, month(df$Start.Time), count)
 
 
