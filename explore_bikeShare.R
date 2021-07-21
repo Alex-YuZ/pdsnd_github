@@ -104,6 +104,13 @@ ggplot(df, aes(x=hour(df$Start.Time))) +
   labs(title = "User Counts in Hours of a Day", x="Hour in a Day", y="Number of Users")
 
 # Question 2
+# summary statistics on Trip.Duration
+summary(df$Trip.Duration)
+
+# check quantiles in Trip.Duration
+quantile(df$Trip.Duration, probs=seq(0, 1, .05))
+
+
 # histogram plot of trip  duration by Hour unit
 ggplot(df, aes(x=Trip.Duration/60)) +
   geom_histogram(binwidth=1, color='black', fill='deepskyblue') +
