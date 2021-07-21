@@ -10,7 +10,25 @@ Explore the BikeShare Data
 This project aims to uncover bike share usage patterns in the first half of 2017, based on the data from a bike share system provider <a href="https://www.motivateco.com/">Motivate</a>.
 
 ### Files used
-Include the files used
+Randomly selected data for the first six months of 2017 are provided for all three cities. All three of the data files contain the same core six (6) columns:
+
+- Start Time (e.g., 2017-01-01 00:07:57)
+- End Time (e.g., 2017-01-01 00:20:53)
+- Trip Duration (in seconds - e.g., 776)
+- Start Station (e.g., Broadway & Barry Ave)
+- End Station (e.g., Sedgwick St & North Ave)
+- User Type (Subscriber or Customer)
+
+
+The Chicago and New York City files also have the following two columns:
+
+- Gender
+- Birth Year
+
+You can find the data files as follows:
+1. <a href='https://video.udacity-data.com/topher/2019/February/5c747ce1_chicago/chicago.csv'>Chicago</a> dataset.
+2. <a href='https://video.udacity-data.com/topher/2019/February/5c747d01_new-york-city/new-york-city.csv'>New York</a> dataset.
+3. <a href='https://video.udacity-data.com/topher/2019/February/5c747d10_washington/washington.csv'>Washington</a> dataset.
 
 ### Credits
 It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
