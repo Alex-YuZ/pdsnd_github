@@ -4,10 +4,10 @@
 Created at 2021/07/21
 
 ### Project Title
-
+Explore the BikeShare Data
 
 ### Description
-Describe what your project is about and what it does
+This project aims to uncover bike share usage patterns in the first half of 2017, based on the data from a bike share system provider <a href="https://www.motivateco.com/">Motivate</a>.
 
 ### Files used
 Include the files used
